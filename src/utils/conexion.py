@@ -15,7 +15,7 @@ logger = logging.getLogger(__name__)
 # Cargar variables del .env
 load_dotenv()
 
-class Database:
+class database:
     def __init__(self, connection_name):
 
         prefix = connection_name
