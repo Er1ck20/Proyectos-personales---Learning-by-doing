@@ -7,7 +7,8 @@ from dotenv import load_dotenv
 logging.basicConfig(
     filename="database.log",
     level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s"
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    encoding='utf-8'
 )
 
 logger = logging.getLogger(__name__)
@@ -15,7 +16,8 @@ logger = logging.getLogger(__name__)
 # Cargar variables del .env
 load_dotenv()
 
-class database:
+class DbAction:
+
     def __init__(self, connection_name):
 
         prefix = connection_name
@@ -23,17 +25,17 @@ class database:
         self.connection = None
         self.cursor = None
 
-        self.username = os.getenv(f'{prefix}_user')
-        self.host = os.getenv(f'{prefix}_host')
-        self.port = os.getenv(f'{prefix}_port')
-        self.service_name = os.getenv(f'{prefix}_service')
+        self.username = os.getenv(f'{prefix}_USER')
+        self.host = os.getenv(f'{prefix}_HOST')
+        self.port = os.getenv(f'{prefix}_PORT')
+        self.service_name = os.getenv(f'{prefix}_SERVICE')
 
         # Traemos la password desde el Credential Manager
         self.password = keyring.get_password(prefix, self.username)
 
         # Si no encontramos la pass
         if not self.password:
-            raise ValueError("No se encontró la password en Credential Manager") # Error si no encontramos la pass
+            raise ValueError("No se encontró la password en el Credential Manager") # Error si no encontramos la pass
 
     # Funcion conectar
     def conectar(self): 
@@ -74,3 +76,6 @@ class database:
         except Exception as e:
             logger.exception(f"Error cerrando conexión: {e}")
             raise
+    
+    def insertar(self):
+        pass
