@@ -3,15 +3,15 @@ import oracledb
 import os
 import logging
 from dotenv import load_dotenv
+from src.config.logging_format import logger
 
-logging.basicConfig(
-    filename="database.log",
-    level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s",
-    encoding='utf-8'
-)
 
-logger = logging.getLogger(__name__)
+
+
+logger.info("Iniciando el DbAction")
+# logger.exception("Error cargando Oracle")
+
+# logger = logging.getLogger(__name__)
 
 # Cargar variables del .env
 load_dotenv()
