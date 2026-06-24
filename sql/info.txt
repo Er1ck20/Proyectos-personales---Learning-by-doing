@@ -1,0 +1,1 @@
+# aqui colocamos los query que usemos en sql en nuestros proyectos, claro si aplican.

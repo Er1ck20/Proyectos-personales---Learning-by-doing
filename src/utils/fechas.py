@@ -1,14 +1,6 @@
-import logging
 import pandas as pd
-import datetime as dt
 
-logging.basicConfig(
-    filename="database.log",
-    level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s")
-
-logger = logging.getLogger(__name__)
-
+from src.config.logging_format import logger
 ''' 
 # TODO - Crear una funcion para hacer ajustes de fechas de manera automatica
 df['fecha_nacimiento'] = pd.to_datetime(df['fecha_nacimiento'])

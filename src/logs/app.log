@@ -5,3 +5,8 @@
 2026-06-21 10:04:15,758 - src.config.logging_format - INFO - Conexión exitosa
 2026-06-21 10:07:25,874 - src.config.logging_format - INFO - Conexión exitosa
 2026-06-21 10:07:34,458 - src.config.logging_format - INFO - Conexión cerrada
+2026-06-21 10:20:26,460 - src.config.logging_format - INFO - Iniciando el DbAction
+2026-06-21 10:20:33,000 - src.config.logging_format - INFO - Conexión exitosa
+2026-06-21 10:20:39,461 - src.config.logging_format - INFO - Conexión cerrada
+2026-06-21 10:39:40,551 - src.config.logging_format - INFO - Iniciando el DbAction
+2026-06-21 10:39:42,309 - src.config.logging_format - INFO - Conexión exitosa
